@@ -1,39 +1,22 @@
+Simulare stație de încărcare pentru un vehicul electric, folosind mai multe LED-uri și butoane.
+4x LED-uri (pentru a simula procentul de încărcare)
+1x LED RGB (pentru starea de liber sau ocupat)
+2x Butoane (pentru start încărcare și stop încărcare)
+8x Rezistoare (6x 220/330ohm, 2x 1K)
+Breadboard
+Linii de legătură
+Starea stației este ‘liberă’. Loader-ul este stins, iar led-ul pentru disponibilitate este verde.
 
-This directory is intended for project header files.
+Se apasă butonul pentru start.
 
-A header file is a file containing C declarations and macro definitions
-to be shared between several project source files. You request the use of a
-header file in your project source file (C, C++, etc) located in `src` folder
-by including it, with the C preprocessing directive `#include'.
+Led-ul pentru disponibilitate se face roșu, iar încărcarea începe prin aprinderea primului LED L1.
 
-```src/main.c
+Led-ul 1 clipește timp de 3s, celelalte fiind stinse.
 
-#include "header.h"
+Dupa încărcarea primului procent de 25% led-ul rămâne aprins și se trece la următorul led, care va începe să clipească.
 
-int main (void)
-{
- ...
-}
-```
+La finalizarea încărcării toate led-urile vor clipi simultan de 3 ori, iar apoi se vor stinge, pentru a semnaliza finalizarea procesului.
 
-Including a header file produces the same results as copying the header file
-into each source file that needs it. Such copying would be time-consuming
-and error-prone. With a header file, the related declarations appear
-in only one place. If they need to be changed, they can be changed in one
-place, and programs that include the header file will automatically use the
-new version when next recompiled. The header file eliminates the labor of
-finding and changing all the copies as well as the risk that a failure to
-find one copy will result in inconsistencies within a program.
+Led-ul pentru disponibilitate se face verde.
 
-In C, the usual convention is to give header files names that end with `.h'.
-It is most portable to use only letters, digits, dashes, and underscores in
-header file names, and at most one dot.
-
-Read more about using header files in official GCC documentation:
-
-* Include Syntax
-* Include Operation
-* Once-Only Headers
-* Computed Includes
-
-https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html
+Dacă oricând de la pornirea încărcării până la finalizarea acesteia este apăsat lung (min 1s) butonul de stop, încărcarea se întrerupe prin animația de final (toate led-urile clipesc de 3 ori), iar led-ul pentru disponibilitate devine verde.

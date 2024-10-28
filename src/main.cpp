@@ -152,5 +152,6 @@ void blinkLED(int ledPin) {
 		digitalWrite(ledPin, LOW);
 		delay(500);
 	}
+	
 	digitalWrite(ledPin, HIGH);
 }
