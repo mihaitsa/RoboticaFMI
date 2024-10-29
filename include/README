@@ -19,4 +19,8 @@ La finalizarea încărcării toate led-urile vor clipi simultan de 3 ori, iar ap
 
 Led-ul pentru disponibilitate se face verde.
 
+<<<<<<< HEAD
 Dacă oricând de la pornirea încărcării până la finalizarea acesteia este apăsat lung (min 1s) butonul de stop, încărcarea se întrerupe prin animația de final (toate led-urile clipesc de 3 ori), iar led-ul pentru disponibilitate devine verde.
+=======
+Dacă oricând de la pornirea încărcării până la finalizarea acesteia este apăsat lung (min 1s) butonul de stop, încărcarea se întrerupe prin animația de final (toate led-urile clipesc de 3 ori), iar led-ul pentru disponibilitate devine verde.
+>>>>>>> edae1f293917201245a1cb8c841645a75f76f43b
